@@ -1,5 +1,4 @@
-import './style.css';
-import manAndGirl from '@/assets/hero-icon.svg';
+import heroIcon from '@/assets/hero-icon.svg';
 import {Link} from '@tanstack/react-router';
 import {Button} from '@/components/ui/button.tsx';
 import {Separator} from '@/components/ui/separator.tsx';
@@ -39,7 +38,7 @@ export default function Hero() {
           </div>
         </div>
         <div className={'place-content-center items-center'}>
-          <img src={manAndGirl} alt={'man and girl'} className={'w-full'}/>
+          <img src={heroIcon} alt={'hero icon'} className={'w-full'}/>
         </div>
 
       </div>
