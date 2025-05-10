@@ -11,11 +11,12 @@ export default function AverageRating({avgRating}: { avgRating: number }) {
   return (
       <div className={'flex gap-2 overflow-hidden text-2xl items-center'}>
         {stars.map((val, i) => (
-            <div key={i}
+            <div key={`star-${i.toString()}`}
                  className={'bg-clip-text text-transparent'}
                  style={{
-                   background: `linear-gradient(90deg, #FFC633 ${val *
-                   100}%, transparent ${val * 100}%)`,
+                   background: `linear-gradient(90deg, #FFC633 ${(val *
+                       100).toFixed(0)}%, transparent ${(val * 100).toFixed(
+                       0)}%)`,
                    WebkitBackgroundClip: 'text',
                    WebkitTextFillColor: 'transparent',
                  }}>★</div>
