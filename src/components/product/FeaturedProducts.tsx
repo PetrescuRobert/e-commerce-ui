@@ -1,26 +1,21 @@
-import product from '@/assets/product-1.png';
-import {Link} from '@tanstack/react-router';
-import AverageRating from '@/components/product/rating';
+import ProductCard from '@/components/product/ProductCard.tsx';
+import {Button} from '@/components/ui/button.tsx';
 
 export default function FeaturedProducts() {
-  return <div>
-    <h1 className={'text-5xl text-center'}>Title</h1>
-    <div className={'flex items-center justify-center'}>
+  return <div className={'py-14 flex flex-col gap-10'}>
+    <h1 className={'text-5xl text-center uppercase mb-4'}>Title</h1>
+    <div
+        className={'grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 place-items-center'}>
       {/*Product card*/}
-      <div className={'flex flex-col text-wrap'}>
-        <div className={'rounded-3xl overflow-hidden'}>
-          {/*img*/}
-          <img src={product} alt={'product'}/>
-        </div>
-        <div className={'flex flex-col py-4'}>
-          {/*info*/}
-          <Link to={'.'} className={'text-2xl font-bold'}>T-SHIRT WITH
-            TAPE
-            DETAILS</Link>
-          <AverageRating avgRating={4}/>
-          <p className={'font-bold text-2xl'}>$120</p>
-        </div>
-      </div>
+      <ProductCard/>
+      <ProductCard/>
+      <ProductCard/>
+      <ProductCard/>
+    </div>
+    <div className={'flex justify-center w-full'}>
+      <Button variant={'outline'}
+              className={'rounded-full py-4 px-14 hover:cursor-pointer'}>View
+        more</Button>
     </div>
   </div>;
 };
